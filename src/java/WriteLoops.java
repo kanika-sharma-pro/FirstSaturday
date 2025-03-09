@@ -183,14 +183,14 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
-do {
-    runningScore = runningScore + currentScore;
-    currentScore = gameNextScore();
+        do {
+            runningScore = runningScore + currentScore;
+            currentScore = gameNextScore();
 
-    // calling
-    w = w + 1;
-    // each time through the inner loop
-}while (runningScore < highestScore);
+            // calling
+            w = w + 1;
+            // each time through the inner loop
+        } while (runningScore < highestScore);
         return w >= 3;
     }
 
@@ -208,13 +208,13 @@ do {
             }
             waitFor(5);
             w = w + 1;
-            }
+        }
 
 
         // calling
 
         // each time through the inner loop
-        
+
         return w;
     }
 
@@ -223,16 +223,19 @@ do {
     // and if it is, add 7 to “i”
     public int loop50by7() {
         int w = 0;
+        int i = 7;
+        while (i < 50) {
+            i += 7;
 
 
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         return w;
     }
 
-    int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
+    int[] threes_array = {3, 6, 9, 12, 15, 18, 21};
 
     // Foo is method that add the first 7 factors of three together and prints
     // out the sum of them all.
@@ -261,11 +264,13 @@ do {
         int w = 0;
         int sumOfThrees = 0;
 
- 
+        for (int i = 0; i < threes_array.length; i++) {
+            sumOfThrees = sumOfThrees + threes_array[i];
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -276,13 +281,16 @@ do {
     // rewrite the loop inside of "foo()" as a 'while' loop
     public int rewriteFooAsWhile() {
         int w = 0;
+        int i = 0;
         int sumOfThrees = 0;
+        while (i < threes_array.length) {
+            sumOfThrees = sumOfThrees + threes_array[i];
 
- 
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -299,13 +307,24 @@ do {
     public int manageYardAndJunior() {
         int w = 0;
         boolean onTime = true;
+        boolean yardNeedsMowed = true;
+
+        while (isSummer()) {
+            if (yardNeedsMowed) {
+                yellAtJuniorToMowLawn();
+                yardNeedsMowed = false;
+                w = w + 1;
+            }
+        }
+        sendJuniorBackToSchool("First week of September");
+
 
         // ADD YOUR CODE here.
- 
-            // be sure to call
-            w = w + 1;
-            // each time inside the loop
-        
+
+        // be sure to call
+
+        // each time inside the loop
+
         return w;
     }
 
@@ -317,7 +336,10 @@ do {
     public int tallyVote1() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
+for (int i = 0; i < voteTallies.length; i++) {
 
+    System.out.println(voteTallies[i]);
+}
  
             // calling
             w = w + 1;
