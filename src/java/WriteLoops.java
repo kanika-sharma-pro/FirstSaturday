@@ -14,7 +14,7 @@ public class WriteLoops {
 
     public int oneToFive() {
         int w = 0;
-        for (int i = 1; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             // Write a FOR loop that counts from 1 to 10.
             // calling
             w = w + 1;
@@ -47,7 +47,7 @@ public class WriteLoops {
     }
 
     public int countDown() {
-        int w = 0;
+        int w = -1;
         for (int i = 100; i >= 0; i--) {
             // Write a FOR loop that counts down from 100 to 0.
             // calling
@@ -68,7 +68,7 @@ public class WriteLoops {
     }
 
     public int countDownFrom5000() {
-        int w = 0;
+        int w = 1;
         for (int i = 1; i <= 5001 / 11; i++) {
             // Write a FOR loop from 1 to less than 5001 by 11s.
             // calling
@@ -152,7 +152,7 @@ public class WriteLoops {
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
     public boolean checkGameScore() {
-        int w = 0;
+        int w = 1;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
@@ -177,7 +177,7 @@ public class WriteLoops {
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
     public boolean checkGameScoreDoWhile() {
-        int w = 0;
+        int w = -1;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
