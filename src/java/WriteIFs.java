@@ -5,21 +5,20 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class WriteIFs
-{
+public class WriteIFs {
  
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
-        if (isAlive(player1 == false)) {
+        boolean Alive = true;
+        if ( player1 != Alive ) {
             displayGameOver(player1);
-        }
-    }
-        /*} else {
+        } else {
             System.out.println("Game Over");
         }
     }
-        */
+
+
     public String thermoSTAT(int room) {
         // Write an IF statement that checks the 
         // “temperature(room)” and if that check is less than 70, 
@@ -27,11 +26,11 @@ public class WriteIFs
         if (tempurature(room) < 70) {
 
             heatOn();
-        } else coolOn();
-        {
+        } else {
+            coolOn(); }
             return this.ss;
         }
-    }
+
     public void fireplaceControl(Object fireplace1) {
         // Write an IF statement that checks 
         // “outsideTemp()” is less than 50 
